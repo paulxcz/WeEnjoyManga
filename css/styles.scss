@@ -440,7 +440,39 @@ footer {
   .card-img,
   .card-img-hovered {
     background-image: var(--card-img-hovered-overlay),
-      url(https://source.unsplash.com/zAi2Is48-MA);
+      url(../images/news-images/portada_macross-delta.png);
+  }
+}
+
+.card-5 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/Revelan_el_ending_de_Muhyo_to_Roji_no_Mahōritsu_Sōdan_Jimusho.png);
+  }
+}
+
+.card-6 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/Evangelion_rompe_el_récord_de_espectadores_en_Amazon_Prime_Video_en_Japón.jpg);
+  }
+}
+
+.card-7 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/Kadokawa_apunta_a_producir_más_de_40_animes_al_año.jpg);
+  }
+}
+
+.card-8 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/Creador_de_One_Piece_confirma_que_el_manga_esta_llegando_a_la_fase_final_banner.jpg);
   }
 }
 //*****VENTANA NOTICIA**********
@@ -827,7 +859,44 @@ $textNewColor: #5a5271;
     }
   }
 
+  .recomendations {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
   
+    .recomendation-card {
+    
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      border-radius: 15px;
+      max-width: none;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 40%;
+        height: 50%;
+        align-self: center;
+        border-radius: 50%;
+      }
+  
+      h2 {
+        margin-bottom: 20px;
+        align-self: center;
+        a {
+          &:visited {
+            color: #000000;
+          }
+        }
+      }
+  
+      p {
+        text-align: justify;
+        line-height: 1.5em;
+      }
+    }
+  }
+
 @keyframes slidebg {
   to {
     background-position:20vw;
