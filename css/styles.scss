@@ -12,21 +12,15 @@ $animationDuration: 6s;
 $amount: 20;
 
 //mixin
-@mixin button($bcolor,
-$url,
-$x1,
-$y1,
-$bor,
-$col) {
- background: $bcolor;
- -webkit-mask: url($url);
- mask: url($url);
- -webkit-mask-size: $x1 $y1;
- mask-size: $x1 $y1;
- border: $bor;
- color: $col;
+@mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
+  background: $bcolor;
+  -webkit-mask: url($url);
+  mask: url($url);
+  -webkit-mask-size: $x1 $y1;
+  mask-size: $x1 $y1;
+  border: $bor;
+  color: $col;
 }
-
 
 * {
   margin: 0;
@@ -85,7 +79,7 @@ header {
 
     li {
       width: 100%;
-      
+      // font-size: 1.2em;
       margin-bottom: 10px;
       padding: 20px 10px;
       &:hover {
@@ -165,6 +159,7 @@ header {
     width: 100%;
     z-index: 2;
     text-shadow: 0px 0px 5px #000000;
+    font-size: 0.9em;
     h1 {
       margin-bottom: 15px;
     }
@@ -176,6 +171,7 @@ header {
   text-align: center;
   h2 {
     margin-bottom: 20px;
+    // font-size: 3.5em;
   }
 }
 
@@ -188,6 +184,7 @@ header {
 .swiper {
   width: 90%;
   max-width: 390px;
+  // height: 400px;
   height: 300px;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 5px #ddd;
@@ -199,6 +196,69 @@ header {
 
 .swiper-button-next {
   opacity: 40%;
+}
+
+//¿Eres Nuevo?
+.advice-new-users {
+
+  margin-bottom: 50px;
+  h1 {
+    // font-size: 3.5em;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .advices {
+    // display: flex;
+    // justify-content: space-between;
+    // // flex-wrap: wrap;
+    // padding: 0 30px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 40px;
+
+    .advice {
+      // width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      padding: 0 15px;
+      // background-color: rebeccapurple;
+
+      h2 {
+        margin-bottom: 30px;
+        font-size: 1.3em;
+        text-align: center;
+      }
+
+      p {
+        font-size: 1.3em;
+        text-align: justify;
+      }
+
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
+
+.ayudanos-mejorar {
+  width: 100%;
+  // background-color: #082032;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  iframe {
+    width: 100%;
+    height: 600px;
+  }
 }
 
 //FOOTER
@@ -474,6 +534,38 @@ footer {
   .card-img-hovered {
     background-image: var(--card-img-hovered-overlay),
       url(../images/news-images/Creador_de_One_Piece_confirma_que_el_manga_esta_llegando_a_la_fase_final_banner.jpg);
+  }
+}
+
+.card-9 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/Chainsaw_Man_obtuvo_el_galardon.png);
+  }
+}
+
+.card-10 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/manga_de_Iron_Man_y_Spiderman.png);
+  }
+}
+
+.card-11 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/Fate_Stay_Night_celebraron_el_Dia_de_Shirou.png);
+  }
+}
+
+.card-12 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/seiken_gakuin_no_maken_tsukai-card-image.png);
   }
 }
 //*****VENTANA NOTICIA**********
@@ -787,7 +879,7 @@ $textNewColor: #5a5271;
   }
 }
 
-//--RESPONSIVE DESIGN-----
+//--RESPONSIVE DESIGN----------------------------------------
 @media screen and(min-width: 400px) {
   .wrapper-notice {
     display: flex;
@@ -806,12 +898,22 @@ $textNewColor: #5a5271;
       align-self: center;
     }
   }
+
+  .ayudanos-mejorar{
+    iframe{
+      width: 80%;
+    }
+  }
 }
 
 @media (max-width: 900px) {
   .services {
     display: flex;
     flex-direction: column;
+  }
+
+  .banner-text {
+    padding: 0 50px;
   }
 }
 
@@ -840,7 +942,7 @@ $textNewColor: #5a5271;
         text-align: center;
         margin: 0 20px;
         padding: 0;
-
+        font-size: 1.1em;
         a {
           transition: border 0.2s ease-in;
           padding: 5px;
@@ -848,9 +950,14 @@ $textNewColor: #5a5271;
         }
 
         a:hover {
-            background-image: linear-gradient(90deg, #082032 0%, #2C394B 49%, #334756 80%, $Primarycolor 100%);
-            animation:slidebg 5s linear infinite;
-         
+          background-image: linear-gradient(
+            90deg,
+            #082032 0%,
+            #2c394b 49%,
+            #334756 80%,
+            $Primarycolor 100%
+          );
+          animation: slidebg 5s linear infinite;
         }
       }
     }
@@ -860,13 +967,77 @@ $textNewColor: #5a5271;
     }
   }
 
+  .banner-text {
+    padding: 0;
+    font-size: 1.5em;
+    h1 {
+      margin-bottom: 15px;
+    }
+  }
+
+  .weekly-recommendations {
+    h2 {
+      font-size: 2em;
+    }
+  }
+
+  .ayudanos-mejorar{
+    iframe{
+      width: 50%;
+    }
+  }
+
+  .advice-new-users {
+    h1 {
+      font-size: 3.5em;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .advices {
+      // display: flex;
+      // justify-content: space-between;
+      // // flex-wrap: wrap;
+
+      padding: 0 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px;
+
+      .advice {
+        // width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 0 15px;
+        // background-color: rebeccapurple;
+
+        h2 {
+          margin-bottom: 30px;
+          font-size: 1.8em;
+          text-align: center;
+        }
+
+        p {
+          font-size: 1.3em;
+          text-align: justify;
+        }
+
+        img {
+          width: 60%;
+        }
+      }
+    }
+  }
+
   .recomendations {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 25px;
-  
+
     .recomendation-card {
-    
       box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
       border-radius: 15px;
       max-width: none;
@@ -880,7 +1051,7 @@ $textNewColor: #5a5271;
         align-self: center;
         border-radius: 50%;
       }
-  
+
       h2 {
         margin-bottom: 20px;
         align-self: center;
@@ -890,7 +1061,7 @@ $textNewColor: #5a5271;
           }
         }
       }
-  
+
       p {
         text-align: justify;
         line-height: 1.5em;
@@ -898,11 +1069,11 @@ $textNewColor: #5a5271;
     }
   }
 
-@keyframes slidebg {
-  to {
-    background-position:20vw;
+  @keyframes slidebg {
+    to {
+      background-position: 20vw;
+    }
   }
-}
 
   .animes {
     margin: 0 30px;
