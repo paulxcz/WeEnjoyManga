@@ -1,16 +1,20 @@
 $font: "Roboto", sans-serif;
 
-$Primarycolor: #fea82f;
+
 $SecondaryColor: #28ffbf;
 $TextColorHeader: #6f69ac;
 $btnHamburgerColor: #ff6701;
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800|Poppins&display=swap");
 
+$textColor: #fff;
 //Banner background
 $particleSize: 8vmin;
 $animationDuration: 6s;
 $amount: 20;
-
+//backgrounds
+$backgroundColor-body: #090910;
+$BackgroundColor-header: #3E065F;
+$Background-footer: #191A19;
 //mixin
 @mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
   background: $bcolor;
@@ -39,12 +43,13 @@ img {
 }
 
 body {
-  background-color: #f2f2f2;
+  // background-color: #f2f2f2;
+  background: $backgroundColor-body;
   font-family: $font;
 }
 
 header {
-  background-color: $Primarycolor;
+  background-color: $BackgroundColor-header;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -117,7 +122,8 @@ header {
   width: 100%;
   min-height: 238px;
   display: flex;
-  background: #2b4f60;
+  // background: #2b4f60; Luego de halloween regresar este color
+  background: url(../images/Tematicas_por_temporada/halloween_banner.jpg) no-repeat center center/cover;
   overflow: hidden;
 
   span {
@@ -169,6 +175,7 @@ header {
 .weekly-recommendations {
   padding: 40px 20px;
   text-align: center;
+  color: $textColor;
   h2 {
     margin-bottom: 20px;
     // font-size: 3.5em;
@@ -202,6 +209,7 @@ header {
 .advice-new-users {
 
   margin-bottom: 50px;
+  color: $textColor;
   h1 {
     // font-size: 3.5em;
     font-size: 2.5em;
@@ -254,7 +262,7 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-
+  color: $textColor;
   iframe {
     width: 100%;
     height: 600px;
@@ -265,8 +273,10 @@ header {
 footer {
   display: flex;
   justify-content: center;
-  background-color: #cdf0ea;
-  box-shadow: 0px -12px 9px 0px #ccc;
+  // background-color: #cdf0ea;
+  // box-shadow: 0px -12px 9px 0px #ccc;
+  background-color: $Background-footer;
+  box-shadow: 0px -12px 9px 0px rgb(36, 35, 35);
   padding: 20px;
   margin-top: 50px;
   .wrapper-footer {
@@ -754,7 +764,7 @@ $textNewColor: #5a5271;
 //VENTANA REDES-SOCIALES
 .redes-sociales {
   font-family: "Montserrat", sans-serif;
-
+  color: $textColor;
   .cards-socials {
     max-width: 1100px;
     margin: 0 auto;
@@ -955,7 +965,7 @@ $textNewColor: #5a5271;
             #082032 0%,
             #2c394b 49%,
             #334756 80%,
-            $Primarycolor 100%
+            $BackgroundColor-header 100%
           );
           animation: slidebg 5s linear infinite;
         }
