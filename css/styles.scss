@@ -578,6 +578,38 @@ footer {
       url(../images/news-images/seiken_gakuin_no_maken_tsukai-card-image.png);
   }
 }
+
+.card-13 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/hetalia_world_tendra_12caps.png);
+  }
+}
+
+.card-14 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/como_leer_manga_tokyoRevenger_post_anime.jpg);
+  }
+}
+
+.card-15 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/Kaijin_Kaihatsubu_no_Kuroitsu-san_revela_nuevo_visual.jpg);
+  }
+}
+
+.card-16 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/rent_a_girlfriend_ranking.jpg);
+  }
+}
 //*****VENTANA NOTICIA**********
 $textNewColor: #5a5271;
 .img-new {
