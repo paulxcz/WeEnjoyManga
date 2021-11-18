@@ -1,6 +1,6 @@
 $font: "Roboto", sans-serif;
 
-
+@import "./playlist-styles/playlist.scss";
 $SecondaryColor: #28ffbf;
 $TextColorHeader: #6f69ac;
 $btnHamburgerColor: #ff6701;
@@ -94,6 +94,8 @@ header {
       a {
         text-decoration: none;
         color: white;
+        display: block;
+        width: 100%;
       }
     }
   }
@@ -642,6 +644,22 @@ footer {
       url(../images/news-images/portada_shachiku-san-wa-youjo-3.webp);
   }
 }
+
+.card-21 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/NETFLIX_elenco_one_piece.jpg);
+  }
+}
+
+.card-22 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/Slime_Taoshite_new_image.png);
+  }
+}
 //*****VENTANA NOTICIA**********
 $textNewColor: #ddd;
 .img-new {
@@ -952,6 +970,7 @@ $textNewColor: #ddd;
     }
   }
 }
+
 
 //--RESPONSIVE DESIGN----------------------------------------
 @media screen and(min-width: 400px) {
