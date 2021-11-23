@@ -660,6 +660,30 @@ footer {
       url(../images/news-images/Slime_Taoshite_new_image.png);
   }
 }
+
+.card-23 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/boku_no_hero_academia.jpg);
+  }
+}
+
+.card-24 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/Se_habría_filtrado_la_pre-selección_de_actores_de_voz_del_anime_Chainsaw_Man.jpg);
+  }
+}
+
+.card-25 {
+  .card-img,
+  .card-img-hovered {
+    background-image: var(--card-img-hovered-overlay),
+      url(../images/news-images/portada_shingeki-107.webp);
+  }
+}
 //*****VENTANA NOTICIA**********
 $textNewColor: #ddd;
 .img-new {
@@ -711,6 +735,24 @@ $textNewColor: #ddd;
     line-height: 25px;
     color: $textNewColor;
     margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1.8em;
+  }
+  
+  .tweet-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  ul{
+    color: $textNewColor;
+    padding-left: 20px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    li{
+      line-height: 1.5em;
+    }
   }
   img {
     width: 100%;
